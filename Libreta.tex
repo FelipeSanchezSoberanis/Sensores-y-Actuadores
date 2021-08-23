@@ -15,6 +15,87 @@
 \newSection{Unidad 1: Fundamentos de mediciones}
 
 \newSubSection{Clasificación y conceptos básicos de los instrumentos}
+
+\newSubSubSection{Historia de las mediciones y mediciones en la era moderna}
+
+El comercio se realizaba originalmente a través del trueque. Se necesitaban mediciones para cuantificar las cantidades que se intercambiaban y para establecer el valor relativo de diferentes productos. Los primeros instrumentos de medición incluían partes del cuerpo, por ejemplo, la mano, el pie, el codo ...
+
+Actualmente, se necesitan mediciones para monitorear diferentes procesos y para este propósito se recurre a la instrumentación.
+
+Es común el empleo de sistemas de medición para el registro de variables, en vez de instrumentos de medición individuales.
+
+El sistema de medición puede dividirse en diferentes componentes.
+
+\newSubSubSection{Sistema de mediciones}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Media/diagrama_sistemas_de_mediciones.png}
+    \caption{Diagrama de sistemas de mediciones.}
+    \label{Fig: Diagrama de sistemas de mediciones}
+\end{figure}
+
+\newSubSubSection{Instrumentación y clasificación de los instrumentos}
+
+La instrumentación es el arte de medir el valor de algunos parámetros presentes en algún proceso, como presión, flujo, nivel o temperatura, por nombrar algunas, y devolver una señal que es proporcional al parámetro medido. Las señales de salida están estandarizadas y pueden ser procesadas por otro equipos para activar indicadores, alarmas o control automático.
+
+Los instrumentos se pueden dividir en:
+\begin{itemize}
+    \item Ciegos: cuando no tienen ninguna indicación visible de la lectura tomada.
+    \item Indicadores: muestran el valor medido.
+    \item Registradores: cuando son capaces de almacenar la información medida, generando un historial de datos.
+\end{itemize}
+
+ó
+\begin{itemize}
+    \item Activos: la cantidad medida (mesurando) modula la magnitud de alguna fuente de poder externa.
+    \item Pasivos: la potencia necesaria para generar la señal de salida del instrumento es producida por completo por acción del mesurando.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Media/comparacion_pasivo_activo.png}
+    \caption{Comparación de los instrumentos pasivos y activos.}
+    \label{Fig: Comparacion de los instrumentos pasivos y activos}
+\end{figure}
+
+igual se pueden encontrar:
+\begin{itemize}
+    \item Instrumentos de deflexión: La variable medida produce en el instrumento un efecto (desplazamiento) y la magnitud del valor medido es desplegado en términos del movimientos producido en el puntero.
+    \item Instrumentos nulos: El efecto del mesurando es equilibrado por un efecto opuesto, regresando el sistema a un punto nulo (balanceado). La medición se obtiene de la magnitud opuesta requerida para alcanzar el balance.
+\end{itemize}
+
+De igual manera, se pueden dividir en instrumentos análogos y digitales:
+
+Un instrumento análogo entrega una salida que varía (continuamente) de acuerdo a los cambios del mesurando, por ejemplo, el indicador de presión de Bourdon. En principio, la salida puede tener cualquier valor dentro del rango de medición. Un instrumento digital tiene una salida que varía en pasos discretos, por lo que tiene un número fijo de salidas.
+
+\newSubSubSection{Estándares de medición}
+
+\begin{itemize}
+    \item Masa: kilogramo (kg).Se define tomando el valor numérico fijo de la constante de Plank.
+    \item Longitud: metro (m). Se define tomando el valor numérico fijo de la velocidad de la luz en el vacío.
+    \item Tiempo: segundo (s). Se define tomando el valor numérico fijo de la frecuencia del Cesio.
+    \item Corriente eléctrica: ampere (A). Se define tomando el valor numérico fijo de la carga elemental.
+    \item Temperatura: kelvin (k). Se define tomando el valor numérico fijo de la constante de Boltzmann.
+    \item Cantidad de substancia: mole (mol). Se define tomando el valor numérico fijo de la constante de Avogadro.
+    \item Intensidad luminosa: candela (cd). Se define con la percepción humana.
+\end{itemize}
+
+\newSubSubSection{Conceptos básicos de los instrumentos}
+
+\begin{itemize}
+    \item Rango (span): conjunto de valores en la escala de medición dentro de los límites superior e inferior.
+    \item Exactitud (accuracy): capacidad del instrumento para acercarse y poder medir el valor real.
+    \item Precisión (precision): capacidad del instrumento para obtener el mismo resultado en mediciones diferentes realizadas en las mismas condiciones.
+    \item Bias (desplazamiento\footnote{No tiene una traducción literal, se usa desplazamiento como un aproximado.}): es un desplazamiento constante (offset) que se presenta a lo largo de toda la escala de medición del instrumento.
+    \item Sensibilidad (sensitivity): razón entra el incremento de la lectura y el incremento de la variable que la ocasiona, después de alcanzar el reposo.
+    \item Histéresis (hysteresis): diferencia máxima que se observa en los valores indicados por el instrumento para un mismo valor del campo de medida, cuando la variable recorre toda la escala en for ascendente y luego en forma descendente.
+    \item Zona muerta (deadzone): es el intervalo de valores de la variable que no hace variar la indicación o la señal del instrumento, es decir, que no se produce respuesta alguna.
+    \item Umbral: nivel mínimo necesario para que el instrumento empiece a indicar una medida, o para que empiece a ser registrado como un cambio.
+    \item Resolución: es la mínima subdivisión de la escala.
+    \item Incertidumbre: denota la inexactitud del instrumento o la tendencia al error que pueda tener.
+\end{itemize}
+
 \newSubSection{Simbología y normatividad}
 \newSubSection{Principales criterios para la selección de instrumentos}
 \newSubSection{Error asociado a los intrumentos de medición}
