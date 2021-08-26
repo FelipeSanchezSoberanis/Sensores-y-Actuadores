@@ -97,8 +97,67 @@ Un instrumento análogo entrega una salida que varía (continuamente) de acuerdo
 \end{itemize}
 
 \newSubSection{Simbología y normatividad}
+
+
+
 \newSubSection{Principales criterios para la selección de instrumentos}
+
+Algunos factores para la selección de sensores son:
+\begin{itemize}
+    \item Características estáticas.
+    \item Características dinámicas.
+    \item Costo.
+    \item Durabilidad.
+    \item Mantenimiento.
+    \item Compatibilidad.
+\end{itemize}
+
+\newSubSubSection{Respuestas de orden cero, primero y segundo}
+
+En los instrumentos con respuesta de \textbf{orden cero}, la salida cambia instantáneamente ante algún cambio en el mesurando como, por ejemplo, el cambio de resistencia en un potenciómetro utilizado para medir desplazamiento.
+
+Los instrumentos con respuesta de \textbf{primer orden} se caracterizan por una constante de tiempo $\tau$. Si el mesurando sufre un cambio abrupto en $\Delta$, $\tau$ es el tiempo que toma a $\Delta$ en cambiar $\approx$ 63\% entre estados inicial y final. La respuesta tiene forma exponencial negativa.
+
+La respuesta de un instrumento de \textbf{segundo orden} es idéntica al comportamiento de un sistema harmónico amortiguado simple. La mayoría de los instrumentos son críticamente amortiguados.
+
+\newSubSubSection{Calibración y trazabilidad}
+
+Los instrumentos solo pueden ajustarse a las características estáticas y dinámicas si están debidamente \textbf{calibrados}. Esto se realiza normalmente de modo jerárquico, calibrando cada instrumento contra otro instrumento similar aún más exacto, cuyo único propósito es calibrar otros instrumentos.
+
+Para la calibración, debe ser posible comprobar una cadena ininterrumpida de comparaciones que termina (o comienza) en algún organismo de estandarización nacional, típicamente algún instituto nacional de metrología como el CENAM. Esta cadena comprobable hacia los estándares internacionales con exactitud conocida se llama \textbf{trazabilidad}.
+
+\newSubSubSection{Procesamiento de señal}
+
+El procesamiento de las señales proveniente de instrumentos de medición se utiliza para mejorar la calidad de la lectura de la señal a la salida del sistema de mediciones o para extraer información útil.
+
 \newSubSection{Error asociado a los intrumentos de medición}
+
+\newSubSubSection{Incertidumbre en las mediciones y otras fuentes de error}
+
+Normalmente se definen do tipos de incertidumbre:
+\begin{itemize}
+    \item Incertidumbre aleatoria.
+    \item Incertidumbre sistemática.
+\end{itemize}
+
+La \textbf{incertidumbre aleatoria} se debe a las fluctuaciones (aleatorias) o ruido inherente a la señal. Se presenta muy seguido cuando un humano observa las lecturas de un medidor analógico. Usualmente, la incertidumbre aleatoria se minimiza realizando promedios de las lecturas de alguna manera.
+
+La \textbf{incertidumbre sistemática} es aquella que no se puede corregir mediante el promedio de mediciones repetidas. Generalmente, el error humano está involucrado en los errores sistemáticos. Algunos de los factores que ocasionan errores sistemáticos son: instrumentos mal calibrados, aguja del medidor doblada, lectura humana de un medidor de aguja desde un ángulo (parallax error).
+
+Otras fuentes de error pueden ser:
+\begin{itemize}
+    \item \textbf{Conexión de puntas de prueba}: es muy común que la resistencia de las puntas de prueba no se tome en cuenta, así como tampoco la dependencia de esta resistencia con respecto a la temperatura. Debe hacerse todo lo posible para minimizar la longitud de las puntas, ya que pueden funcionar como antenas, enviando o (pero aún) captando señales ``perdidas'' como la de la red eléctricas de 60Hz.
+    \item \textbf{EMFs térmicas (EMF $\rightarrow$ Fuerza electromotriz)}: siempre que dos metales diferentes se unen, se genera una fuerza.
+\end{itemize}
+
+\newSubSubSection{Perturbación de un sisitema debido a las mediciones y características de las señales}
+
+Es imposible realizar mediciones en un sistema sin perturbarlo de alguna manera.
+
+\begin{itemize}
+    \item DC (corriente directa), son señales con valores constantes que no cambian con respecto al tiempo.
+    \item AC (corriente alterna), son señales senoidales o superposición de las mismas.
+\end{itemize}
 
 \newpage
 \newSection{Unidad 2: Métodos instrumentales de análisis}
