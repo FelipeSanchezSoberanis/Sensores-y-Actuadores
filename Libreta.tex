@@ -163,6 +163,125 @@ Es imposible realizar mediciones en un sistema sin perturbarlo de alguna manera.
 \newSection{Unidad 2: Métodos instrumentales de análisis}
 
 \newSubSection{Adquisición de datos}
+
+Es una necesidad habitual en la mayoría de las actividades industriales.
+
+Proceso de acondicionamiento y selección de la señal a adquirir, que puede ser suministrada por un sensor.
+
+La toma de muestras de esta señal, la conversión analógico/digital de dicha señal, realiza a frecuencia adecuada y la transferencia de esta información digital a un sistema que pueda procesarla (computador).
+
+Para llevar a cabo un control eficaz sobre un determina proceso, es necesario capturar una serie de datos para, posteriormente:
+\begin{itemize}
+    \item Analizarlos.
+    \item Tratarlos.
+    \item Almacenarlos.
+    \item Llevar a cabo una presentación clara y eficaz de la evolución del proceso.
+\end{itemize}
+
+Generalmente, los datos o variables que se han de captar tienen un carácter analógico, mientras que su tratamiento, almacenamiento y análisis son mucho más eficaces cuando se hace digitalmente.
+
+\newSubSubSection{Sensores o transductores}
+
+Son los encargados de convertir la variable física a medir (temperatura, humedad, presión, etc.) en señal eléctrica.
+
+Esta señal eléctrica suele ser de muy bajo nivel, por lo que generalmente se requiere un acondicionamiento previo, consiguiendo así niveles de tensión/corriente adecuados para el resto de los módulos del SAD.
+
+\newSubSubSection{Multiplexor y amplificador de instrumentación}
+
+\textbf{Multiplexor:} este módulo o circuito se encarga de seleccionar la señal de entrada que va a ser tratada en cada momento.
+
+\textbf{Amplificador de instrumentación:} la función de este bloque es amplificar la señal de entrada del SAD para que su margen dinámico se aproxime lo máximo posible al margen dinámico del conversor A/D (ADC) consiguiéndose de esta forma la máxima resolución. En SAD con varios canales de entrada, cada canal tendrá un rango de entrada distinto, con lo que será necesario que este amplificador sea de ganancia programable.
+
+\newSubSubSection{S \& H (Sample \& Hold, Muestreo y Retención)}
+
+Este circuito es el encargado de tomar la muestra del canal seleccionado (sample) y mantenerla (hold) durante el tiempo que dura la conversión. Este circuito será necesario siempre que la señal de entrada sufra variaciones apreciables durante el tiempo que dura la conversión.
+
+\newSubSubSection{Convertidor analógico/digital}
+
+Se encarga de realizar la conversión analógico/digital propiamente dicha, proporcionando un código digital de salida que presenta el valor de la muestra adquirida en cada momento. Es uno de los módulos fundamentales en cualquier sistema de adquisición de datos (SAD ó DAQ) y sus características pueden condicionar al resto de los módulos/circuitos del sistema.
+
+Tiene las siguientes generalidades:
+\begin{itemize}
+    \item Topología.
+    \item Resolución.
+    \item Velocidad.
+\end{itemize}
+
+\newSubSubSection{SAR y ADCs}
+
+\noindent
+\textbf{SAR: resumen}
+
+\begin{itemize}
+    \item Topología muy popular.
+    \item Atractiva para mediciones puntuales o multiplexadas.
+    \item Velocidad desde DC hasta 4Msps.
+    \item Resolución de 8-18 bits.
+    \item Ventajas:
+    \begin{itemize}
+        \item No presenta latencia.
+        \item Buena relación entre velocidad, resolución y consumo de energía.
+    \end{itemize}
+\end{itemize}
+
+\noindent
+\textbf{ADCs: resumen}
+
+\begin{itemize}
+    \item Muy alta resolución.
+    \item Muy estables.
+    \item Incorporan filtro digital.
+    \item La respuesta en frecuencia y la latencia dependen del filtro digital.
+    \item Integran varios componentes:
+    \begin{itemize}
+        \item Filtro digital, Buffer, PGA, Vref, Calibración/Diagnóstico.
+    \end{itemize}
+    \item Requiere configuración de registros internos.
+\end{itemize}
+
+\newSubSubSection{Teorema de Nyquist}
+
+El teorema demuestra que la reconstrucción exacta de una señal periódica continua en banda base a partir de sus muestras, es matemáticamente posible si la señal está limitada en banda y la tasa de muestreo es superior al doble de su ancho de banda. En caso de que esto no se tome en cuenta, se puede generar el efecto aliasing (ver \cref{Fig: Efecto aliasing}).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Media/efecto_aliasing.png}
+    \caption{Efecto aliasing.}
+    \label{Fig: Efecto aliasing}
+\end{figure}
+
+Algunas de la consideraciones para la exactitud de la conversión:
+\begin{itemize}
+    \item \textbf{Multiplexor:} baja resistencia de conducción (RON) y constante en el margen de variación de las señales de entrada. Tiempos de (falta completar estos puntos).
+    \item \textbf{S/H:} pequeña tiensión offset y deriva. Máxima velocidad de caída en modo Hold, siempre y cuando la tensión a la salida del S/H está constante el tiempo necesario para que el ADC la digitalice. Tiempos de apertura, de adquisición y de asentamiento mínimos.
+    \item \textbf{ADC:} alta resolución. Mínimo tiempo de conversión. Error de linealidad y de ganancia pequeños.
+\end{itemize}
+
+Algunas consideraciones para la velocidad de muestreo:
+\begin{itemize}
+    \item Tiempo de establecimiento del MUX.
+    \item Tiempo de establecimiento del amplificador.
+    \item Tiempo de adquisición del S/H.
+    \item Tiempo de conversión del ADC.
+\end{itemize}
+
+\newSubSection{Acondicionamiento analógico de la señal}
+
+Hay que tomar en cuenta:
+\begin{itemize}
+    \item Tipos de señal.
+    \item Ruido.
+    \item Acondicionamiento analógico.
+    \item Aislamientos y lazos a tierra.
+    \item Calibración del instrumentos.
+\end{itemize}
+
+Las tipos de señal son:
+\begin{itemize}
+    \item Señal simple.
+    \item Señal diferencial.
+\end{itemize}
+
 \newSubSection{Calibración de los instrumentos de medición}
 \newSubSection{Instrumentación virtual}
 \newSubSection{Análisis estadístico de los datos}
